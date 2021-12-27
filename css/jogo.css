@@ -66,9 +66,8 @@ body{
 }
 #personagemDireita{
     position: absolute;
-    width: 32%;
+    width: 30%;
     bottom: 0%;
-    right: 8%;
 }
 /*~~~~ fim tela*/
 
@@ -133,11 +132,8 @@ li{
     padding-right: 0%;
     position: relative;
 }
-#button1{
-    padding-bottom: 2px;
-}
 
-#opcao1,#opcao2,#opcao3{
+#opcao1, #opcao2, #opcao3{
     background-color: rgba(127, 255, 212, 0.322);
     width: 100%;
     height: 50px;
@@ -152,7 +148,7 @@ li{
     color: black;
     position: relative;
 }
-#opcao1:hover,#opcao2:hover,#opcao3:hover{
+#opcao1:hover, #opcao2:hover, #opcao3:hover{
     background-color: #ffc0cb;
     box-shadow: inset 0 0 1em rgb(218, 162, 172);
                 
@@ -171,3 +167,4 @@ li{
     text-align: center;
 }
 /*~~~~fim rodapé*/
+
