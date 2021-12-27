@@ -106,7 +106,7 @@ personagemDireita.style.opacity = estados["estados"][estado]["estado"]["personag
 botaoOpcao1.innerHTML = estados["estados"][estado]["estado"]["opcoes"][0]
 botaoOpcao2.innerHTML = estados["estados"][estado]["estado"]["opcoes"][1]
 botaoOpcao3.innerHTML = estados["estados"][estado]["estado"]["opcoes"][2]
-
+i=0
 mudaTexto(falas, i)
 desaparece(falas, i)
 console.log("muda fundo funciona")
