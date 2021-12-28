@@ -13,7 +13,7 @@ var estados = {
             "estadosFuturos":[1,2,3],
             "cenarioURL":"imagens/rua.jpg",
             "personagensURL":["imagens/khalisto.png", "imagens/khalisto.png"],
-            "pesonagemDireita":0
+            "pesonagemDireitaA":1000
         }
         
     }]
@@ -77,7 +77,7 @@ botaoOpcao2.setAttribute("id", "opcao2")
 lista.appendChild(botaoOpcao2)
 
 const botaoOpcao3 = document.createElement("button")
-botaoOpcao2.setAttribute("id", "opcao3")
+botaoOpcao3.setAttribute("id", "opcao3")
 lista.appendChild(botaoOpcao3)
 
 console.log("CONSTRUIDO O FUNDO")
@@ -102,7 +102,7 @@ imagemFundo.src = estados["estados"][estado]["estado"]["cenarioURL"]
 fundo.style.backgroundImage = (imagemFundo)
 personagemDireita.src = estados["estados"][estado]["estado"]["personagensURL"][0]
 personagemEsquerda.src = estados["estados"][estado]["estado"]["personagensURL"][1]
-personagemDireita.style.opacity = estados["estados"][estado]["estado"]["personagemDireita"]
+personagemDireita.style.opacity = 0
 botaoOpcao1.innerHTML = estados["estados"][estado]["estado"]["opcoes"][0]
 botaoOpcao2.innerHTML = estados["estados"][estado]["estado"]["opcoes"][1]
 botaoOpcao3.innerHTML = estados["estados"][estado]["estado"]["opcoes"][2]
@@ -114,6 +114,7 @@ console.log("muda fundo funciona")
 
 function mudaTexto(falas, i){
 desaparece(falas,i)
+apareceDireita(i)
 texto.innerHTML = `<b><i>${falas["dialogos"][estado]["falas"][i]["autor"]} - </i></b>${falas["dialogos"][estado]["falas"][i]["fala"]}`
 console.log("muda texto funcina")
 }
@@ -134,6 +135,11 @@ function desaparece(falas, i){
         botaoOpcao3.style.opacity = 1
     }
 console.log("DESAPARECE FUNCIONA")
+}
+function apareceDireita(i){
+if(i=estados["estados"][estado]["estado"]["pesonagemDireitaA"]){
+    personagemDireita.style.opacity = 1
+    }
 }
 
 botaoNext.addEventListener("click", function(){
