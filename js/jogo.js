@@ -2,7 +2,9 @@
 var estado = 0
 var i = 0
 
-var estados = {
+const estados = require("./json/estados.json")
+const falas = require("./json/falas.json")
+/*var estados = {
     "estados":[{
         "estado":{
             "opcoes":[
@@ -46,7 +48,7 @@ var falas = {
         ],
         "numeroDeFalas":6
     }]
-}
+}*/
 
 
 
